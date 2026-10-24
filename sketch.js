@@ -33,6 +33,18 @@ function getRandomCountryPair() {
 }
 
 let countryPair;
+
+function deviceShaken() {
+  if (countryPair === undefined) {
+    countryPair = getRandomCountryPair()
+    console.log(countryPair)
+    timer = allottedTime
+    if (dead) {
+      dead = false
+      score = 0
+    } 
+}
+
 function keyPressed() {
   if (key == ' ' && countryPair === undefined) {
     countryPair = getRandomCountryPair()
