@@ -7,6 +7,7 @@ async function setup() {
   cnv = createCanvas(windowWidth - margin, windowHeight - margin);
   cnv.position(margin/2, margin/2, 'fixed');
   background(180);
+  console.log('Hello world')
   countryList = await loadJSON('countries.json')
   //console.log(countryList)
   //loadPhysics()
