@@ -52,6 +52,7 @@ function keyPressed() {
     score = 0
     timer = allottedTime
     countryPair = undefined
+    inMainMainu = true
   }
   if (inMainMenu) {
     if (key == 'ArrowLeft' || key == 'ArrowRight') {
@@ -148,7 +149,7 @@ let inMainMenu;
 
 function draw() { 
   timer = Math.min(timer, allottedTime+1)
-  inMainMenu = false
+  
   if (timer<=0 || dead) {
     background(incorrectColour)
     fill(textColour)
@@ -188,6 +189,7 @@ function draw() {
 
 
   if (countryPair) {
+    inMainMenu = false
     let c1 = countryPair[0]
     let c2 = countryPair[1]
     textSize(32)
