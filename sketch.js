@@ -42,7 +42,8 @@ function deviceShaken() {
     if (dead) {
       dead = false
       score = 0
-    } 
+    }
+  }
 }
 
 function keyPressed() {
